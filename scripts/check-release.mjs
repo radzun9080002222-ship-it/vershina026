@@ -19,8 +19,8 @@ const calc = readFileSync('src/components/Calculator.tsx', 'utf8');
 assert.ok(calc.includes('min={25}'));
 assert.ok(calc.includes('Math.max(rate * area, tariff.minPrice)'));
 const html = readFileSync('dist/index.html', 'utf8');
-assert.ok(html.includes('https://vershina40.ru/'));
-assert.ok(html.includes('Калуге'));
+assert.ok(html.includes('https://vershina43.ru/'));
+assert.ok(html.includes('Кирове'));
 assert.ok(!/Воронеж|Балаших|Сочи|vershina-36|112470058/.test(html));
 for (const match of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)) {
   const url = match[1].split(/[?#]/)[0];
@@ -28,14 +28,14 @@ for (const match of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)) {
     assert.ok(existsSync(`dist/${url.replace(/^(?:\.\/|\/)/, '')}`), `Missing asset ${url}`);
   }
 }
-for (const file of ['CNAME', 'favicon.ico', 'robots.txt', 'sitemap.xml', 'privacy.html', 'site.webmanifest', 'images/og-kaluga.png']) {
+for (const file of ['CNAME', 'favicon.ico', 'robots.txt', 'sitemap.xml', 'privacy.html', 'site.webmanifest', 'images/og-kirov.png']) {
   assert.ok(existsSync(`dist/${file}`), `Missing file ${file}`);
 }
-assert.equal(readFileSync('dist/CNAME', 'utf8').trim(), 'vershina40.ru');
+assert.equal(readFileSync('dist/CNAME', 'utf8').trim(), 'vershina43.ru');
 for (const name of ['robots.txt', 'sitemap.xml', 'privacy.html']) {
   const text = readFileSync(`dist/${name}`, 'utf8');
-  assert.ok(text.includes('vershina40.ru'));
+  assert.ok(text.includes('vershina43.ru'));
   assert.ok(!/vershina-36|Воронеж/.test(text));
 }
 for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(match[1]);
-console.log('Kaluga release check: SEO, assets, prices, minima and calculator formula OK.');
+console.log('Киров release check: SEO, assets, prices, minima and calculator formula OK.');

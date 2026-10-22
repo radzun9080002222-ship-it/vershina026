@@ -21,10 +21,10 @@ export default function Hero() {
             className="mt-1 block leading-[0.8] text-emerald text-[13vw] md:text-[66px]"
             style={{ fontFamily: "'Caveat', cursive" }}
           >
-            в Калуге
+            в Кирове
           </span>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70 md:text-xl">
-            Доступный клининг в каждую квартиру и дом Калуги.
+            Доступный клининг в каждую квартиру и дом Кирова.
             Точная цена за 2 минуты — до приезда, а не после.
           </p>
           <div className="mt-9">
@@ -49,7 +49,7 @@ export default function Hero() {
           </dl>
         </div>
         <div className="relative">
-          <img src="/images/hero-kaluga.webp" alt="Светлая квартира с видом на музей космонавтики и ракету «Восток» в Калуге" className="aspect-[4/5] w-full rounded-3xl object-cover" fetchPriority="high" />
+          <img src="/images/hero-kirov.webp" alt="Светлая квартира с видом на ротонду Александровского сада и реку Вятку в Кирове" className="aspect-[4/5] w-full rounded-3xl object-cover" fetchPriority="high" />
           <div className="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white p-5 shadow-card md:block">
             <div className="text-[11px] font-semibold uppercase tracking-widest2 text-emerald">{area === null ? 'приёмка по стандарту' : 'убрано в этом месяце'}</div>
             <div className="mt-1 text-2xl font-bold text-graphite">

@@ -1,4 +1,4 @@
-name: Check Kaluga release
+name: Check Киров release
 on:
   push:
     branches: [main]

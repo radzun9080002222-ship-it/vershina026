@@ -1,5 +1,6 @@
 (function () {
-  var id = 113501726;
+  var id = 0; // Set only the dedicated counter for this domain.
+  if (!id) return;
   window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
   window.ym.l = Date.now();
   window.ym(id, 'init', { webvisor: true, clickmap: true, accurateTrackBounce: true, trackLinks: true });
