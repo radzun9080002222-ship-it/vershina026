@@ -1,4 +1,4 @@
-name: Check Киров release
+name: Check Чебоксары release
 on:
   push:
     branches: [main]

@@ -1,5 +1,5 @@
 (function () {
-  var id = 113731181; // Dedicated Kirov counter, dima.radzun.
+  var id = 0; // Dedicated Cheboksary counter pending; never reuse another city counter.
   if (!id) return;
   window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
   window.ym.l = Date.now();
