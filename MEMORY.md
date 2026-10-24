@@ -34,6 +34,13 @@
 - Локальная production build с новойМетрикой и verification прошла. GitHub Check39841168770/39841272762 success. Старый случайный Cloudrun39841168316 завершился failure без своихSecrets; актуальный workflow pushотключён до созданияbucket/deployer/Secrets. Это не ошибка работающего сайта: публикации ещё не было.
 - Квота остаётся25/25, бакетыvershina21.ru/www.vershina21.ru иdeployer НЕ созданы. SSLfpq9q2ir02m8ktbut77f покаValidating, обеACMEпривязаны кCloudDNSdnsdfdk7ecpf69au0cq2. Не пересоздавать. Отдельное фоновое доведениеЧебоксар не включалось; текущаяautomation относится43/69.
 
+### 24.10.2026 — публикация на GitHub Pages вместо ожидания квоты
+
+- Пользователь выбрал GitHub Pages и прислал REG.RU со сменой NS на ns1.reg.ru/ns2.reg.ru, четырьмя A185.199.108/109/110/111.153 и www CNAME radzun9080002222-ship-it.github.io. Старый Cloud-план выше заменён для текущего запуска; Cloud-ресурсы не удаляли.
+- GitHub Pages включён build_type workflow, custom domain vershina21.ru. Новый deploy-pages.yml публикует dist при pushmain/manual, ubuntu-24.04-arm. Cloud workflow по-прежнему только ручной, не запускать без собственных бакетов/ключей.
+- Commit25ca443, Pagesrun40120683745 success. Локальный productionbuild/release-check успешен. Через curl --resolve на GitHub185.199.108.153 главнаяHTTP200; реальные JS/CSS, hero, favicon, metrika.js/privacy/robots/sitemapHTTP200. Контент/цены/счётчик не менялись.
+- На момент проверки публичный8.8.8.8 ещё возвращает NSЯндекса/A213.180.193.247: ждём распространение изменений регистратора. ОбычныйHTTPS пока WRONG_PRINCIPAL, TLS не обходили. https_enforcedfalse, сертификатGitHub ещё не подтверждён; запуск НЕ объявлять полностью завершённым. После DNS проверить PagesSSL, включить enforceHTTPS после доступности, проверить оба домена/мобильную/калькулятор/Вебмастер. ПовторноNS не менять без причины.
+
 ## История исходного шаблона — НЕ текущие ресурсы Чебоксар
 
 ## Киров — текущий проект, 22.10.2026
