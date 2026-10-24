@@ -17,6 +17,7 @@ assert.equal(turnkey.minPrice, 12000);
 assert.deepEqual(turnkey.rateOptions.map(t => t.rate), [450, 550]);
 const calc = readFileSync('src/components/Calculator.tsx', 'utf8');
 assert.ok(calc.includes('min={25}'));
+assert.ok(calc.includes('const [area, setArea] = useState(25)'), 'Calculator must start at minimum 25 m²');
 assert.ok(calc.includes('Math.max(rate * area, tariff.minPrice)'));
 const html = readFileSync('dist/index.html', 'utf8');
 const metrika = readFileSync('dist/metrika.js', 'utf8');
